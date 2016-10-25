@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>510</width>
+    <height>418</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Convertor</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QTextEdit" name="m_textEdit"/>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="m_upperBtn">
+        <property name="text">
+         <string>Upper</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="m_asciiEncodeBtn">
+        <property name="text">
+         <string>ASCIIEncode</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="m_gbkToUtf8Btn_3">
+        <property name="text">
+         <string>中文ToGBKCode</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="m_lowerBtn">
+        <property name="text">
+         <string>Lower</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="m_asciiDecodeBtn">
+        <property name="text">
+         <string>ASCIIDecode</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="m_gbkToUtf8Btn_5">
+        <property name="text">
+         <string>GBKCodeTo中文</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="m_lowerBtn_2">
+        <property name="text">
+         <string>Swapcase</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="m_hexEncodeBtn">
+        <property name="text">
+         <string>HexEncode</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="m_gbkToUtf8Btn_2">
+        <property name="text">
+         <string>中文ToUtf8Code</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="m_lowerBtn_3">
+        <property name="text">
+         <string>Capitalize</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="m_showCodesBtn">
+        <property name="text">
+         <string>ShowCodes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="m_gbkToUtf8Btn_6">
+        <property name="text">
+         <string>Utf8CodeTo中文</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="m_urlEncodeBtn_2">
+        <property name="text">
+         <string>MD5Encode(Hex)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QPushButton" name="m_base64EncodeBtn">
+        <property name="text">
+         <string>Base64Encode</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QPushButton" name="m_gbkToUtf8Btn_4">
+        <property name="text">
+         <string>中文ToUnicodeCode</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QPushButton" name="m_urlDecodeBtn_2">
+        <property name="text">
+         <string>MD5Decode(16Byte)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QPushButton" name="m_base64DecodeBtn">
+        <property name="text">
+         <string>Base64Decode</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QPushButton" name="m_gbkToUtf8Btn_7">
+        <property name="text">
+         <string>UnicodeCodeTo中文</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>强制编码字符</string>
+        </property>
+        <property name="text">
+         <string>强编字符：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="m_foceUrlEncodeEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>强制编码字符，如将'ab'都强制编码</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_urlEncodeBtn">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>UrlEncode</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_urlDecodeBtn">
+        <property name="text">
+         <string>UrlDecode</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="m_replaceFromEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>50</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>0x</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>To</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="m_replaceToEdit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_replaceBtn">
+        <property name="text">
+         <string>Replace</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="m_printLabel">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="openExternalLinks">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_linkWebBtn">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	color:#0d3da3;
+	/*color: rgb(255, 255, 255);
+	background-color: rgb(167, 205, 255);
+	border:none;
+    padding: 3px;
+	font-family: &quot;Verdana&quot;;
+	font-size: 15px;
+	text-align: center;*/
+}
+QPushButton:hover, QPushButton:pressed , QPushButton:checked
+{
+	/*background-color: rgb(85, 170, 255);
+	text-align: right;
+	padding-right: 20px;
+	font-weight:100*/
+}
+QPushButton:hover
+{
+	color:#0459e1; 
+	/*background-image: url(:/icon/icons/dark/appbar.navigate.next.png);*/
+	/*background-repeat:no-repeat;
+	background-position: center left;*/
+}
+QPushButton:pressed, QPushButton:checked
+{
+	/*background-image: url(:/icon/icons/light/appbar.navigate.next.png);*/
+	/*background-repeat:no-repeat;
+	background-position: center left;*/
+}</string>
+        </property>
+        <property name="inputMethodHints">
+         <set>Qt::ImhNone</set>
+        </property>
+        <property name="text">
+         <string>by Pamxy</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Resource.qrc">
+          <normaloff>:/img/navigate-right-icon.png</normaloff>:/img/navigate-right-icon.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>11</width>
+          <height>16</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>510</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>m_upperBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onUpperBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>85</x>
+     <y>222</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_lowerBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onLowerBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>136</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>80</x>
+     <y>261</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_asciiEncodeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onAsciiEncodeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>336</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>246</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_asciiDecodeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onAsciiDecodeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>336</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>247</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_hexEncodeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onHexEncodeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>336</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>251</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_urlEncodeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onUrlEncodeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>349</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>509</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_urlDecodeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onUrlDecodeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>503</x>
+     <y>349</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>490</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_base64EncodeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onBase64EncodeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>336</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>492</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_base64DecodeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onBase64DecodeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>336</x>
+     <y>318</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>493</x>
+     <y>343</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_urlEncodeBtn_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onMD5EncodeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>170</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>488</x>
+     <y>363</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_urlDecodeBtn_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onMD5DecodeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>170</x>
+     <y>318</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>491</x>
+     <y>398</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_lowerBtn_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onSwapcaseBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>136</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>91</x>
+     <y>291</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_lowerBtn_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onCapitalizeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>136</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>319</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_gbkToUtf8Btn_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onGBKToCodeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>503</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>366</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_gbkToUtf8Btn_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onUtf8ToCodeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>503</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_gbkToUtf8Btn_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onUnicodeToCodeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>503</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>366</x>
+     <y>350</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_gbkToUtf8Btn_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onCodeToGBKBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>503</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>363</x>
+     <y>261</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_gbkToUtf8Btn_6</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onCodeToUtf8BtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>503</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>364</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_gbkToUtf8Btn_7</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onCodeToUnicodeBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>503</x>
+     <y>318</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>367</x>
+     <y>379</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_replaceBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onReplaceBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>503</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>97</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_showCodesBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onShowCodesBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>336</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>345</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_linkWebBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onLinkWebBtnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>435</x>
+     <y>401</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>405</x>
+     <y>389</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onUpperBtnClick()</slot>
+  <slot>onLowerBtnClick()</slot>
+  <slot>onGBKToUtf8BtnClick()</slot>
+  <slot>onUtf8toGBKBtnClick()</slot>
+  <slot>onGBKToUnicodeBtnClick()</slot>
+  <slot>onUtf8ToUnicodeBtnClick()</slot>
+  <slot>onAsciiEncodeBtnClick()</slot>
+  <slot>onAsciiDecodeBtnClick()</slot>
+  <slot>onHexEncodeBtnClick()</slot>
+  <slot>onHexDecodeBtnClick()</slot>
+  <slot>onUrlEncodeBtnClick()</slot>
+  <slot>onUrlDecodeBtnClick()</slot>
+  <slot>onBase64EncodeBtnClick()</slot>
+  <slot>onBase64DecodeBtnClick()</slot>
+  <slot>onMD5EncodeBtnClick()</slot>
+  <slot>onMD5DecodeBtnClick()</slot>
+  <slot>onSwapcaseBtnClick()</slot>
+  <slot>onCapitalizeBtnClick()</slot>
+  <slot>onGBKToCodeBtnClick()</slot>
+  <slot>onUtf8ToCodeBtnClick()</slot>
+  <slot>onUnicodeToCodeBtnClick()</slot>
+  <slot>onCodeToGBKBtnClick()</slot>
+  <slot>onCodeToUtf8BtnClick()</slot>
+  <slot>onCodeToUnicodeBtnClick()</slot>
+  <slot>onReplaceBtnClick()</slot>
+  <slot>onShowCodesBtnClick()</slot>
+  <slot>onLinkWebBtnClick()</slot>
+ </slots>
+</ui>
